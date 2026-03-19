@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slot Game</title>
+<link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+<div id="machine">
+
+<div id="panel">
+COIN : <span id="coin">100</span>
+BET : <span id="bet">0</span>
+</div>
+
+<div id="controls">
+
+<div id="betPanel">
+
+<button onclick="betCoin()">BET</button>
+<button onclick="maxBet()">MAXBET</button>
+
+</div>
+
+<div id="spinPanel">
+
+<button id="spinBtn" onclick="spin()">SPIN</button>
+
+</div>
+
+</div>
+
+<div id="reelWindow">
+<div id="slot">
+
+<div class="reel" id="reel1"></div>
+<div class="reel" id="reel2"></div>
+<div class="reel" id="reel3"></div>
+<div id="line"></div>
+
+</div>
+
+</div>
+
+<div id="stopPanel">
+
+<button class="stopBtn" onclick="stopReel(0)">STOP</button>
+<button class="stopBtn" onclick="stopReel(1)">STOP</button>
+<button class="stopBtn" onclick="stopReel(2)">STOP</button>
+
+</div>
+
+</div>
+
+<p id="result"></p>
+
+<audio id="spinSound" src="sounds/spin.mp3"></audio>
+<audio id="stopSound" src="sounds/stop.mp3"></audio>
+<audio id="winSound" src="sounds/win.mp3"></audio>
+
+<script src="engine.js"></script>
+
+</body>
+</html>
